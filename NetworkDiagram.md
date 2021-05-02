@@ -1,4 +1,5 @@
-
+<script src="https://unpkg.com/mermaid/"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 # Network Diagram
 
 
