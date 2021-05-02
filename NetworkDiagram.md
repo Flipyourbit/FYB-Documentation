@@ -1,14 +1,23 @@
-<script src="https://unpkg.com/mermaid/"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+
 # Network Diagram
 
 
 
-```mermaid
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBDb21jYXN0Wy9Db21jYXN0XFxdIC0tLXwzMDBNYnBzLzMwTWJwc3wgY29tY2FzdFBPUFxuICAgIGNvbWNhc3RQT1BbL2NvbWNhc3RQT1BcXF0gLS0tfDFHYnBzfCBwZmVzbnNlXG4gICAgcGZlc25zZVtwZmVzbnNlXVxuICAgIHBmZXNuc2UgLS0tLXwxMEdicHN8IDcwNTBRWFs3MDUwUVhdXG4gICAgcGZlc25zZS0tLXwxR2Jwc3wgVVMxNjE1MFdbVVMxNjE1MFddXG4gICAgcGZlc25zZSAtLS18MTBHYnBzfCB1bnVzZWRbdW51c2VkXVxuICAgIDcwNTBRWCA9PT09fDQwR2Jwc3wgNzA1MFRbNzA1MFRdXG4gICAgVkhbVmlydHVhbEhvc3RdID09PSB8IDN4MTBHYnBzIHwgNzA1MFFYICYgNzA1MFQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBDb21jYXN0Wy9Db21jYXN0XFxdIC0tLXwzMDBNYnBzLzMwTWJwc3wgY29tY2FzdFBPUFxuICAgIGNvbWNhc3RQT1BbL2NvbWNhc3RQT1BcXF0gLS0tfDFHYnBzfCBwZmVzbnNlXG4gICAgcGZlc25zZVtwZmVzbnNlXVxuICAgIHBmZXNuc2UgLS0tLXwxMEdicHN8IDcwNTBRWFs3MDUwUVhdXG4gICAgcGZlc25zZS0tLXwxR2Jwc3wgVVMxNjE1MFdbVVMxNjE1MFddXG4gICAgcGZlc25zZSAtLS18MTBHYnBzfCB1bnVzZWRbdW51c2VkXVxuICAgIDcwNTBRWCA9PT09fDQwR2Jwc3wgNzA1MFRbNzA1MFRdXG4gICAgVkhbVmlydHVhbEhvc3RdID09PSB8IDN4MTBHYnBzIHwgNzA1MFFYICYgNzA1MFQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
+
+
+
+
+
+## Graph code
 graph TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
-```
+    Comcast[/Comcast\] ---|300Mbps/30Mbps| comcastPOP
+    comcastPOP[/comcastPOP\] ---|1Gbps| pfesnse
+    pfesnse[pfesnse]
+    pfesnse ----|10Gbps| 7050QX[7050QX]
+    pfesnse---|1Gbps| US16150W[US16150W]
+    pfesnse ---|10Gbps| unused[unused]
+    7050QX ====|40Gbps| 7050T[7050T]
+    VH[VirtualHost] === | 3x10Gbps | 7050QX & 7050T
